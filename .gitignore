@@ -1,0 +1,34 @@
+# ---------- Node ----------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ---------- SECRETS: never commit these ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+secrets.json
+vault-init.json
+vault-keys.txt
+.vault-token
+role_id
+secret_id
+
+# ---------- Build & runtime ----------
+dist/
+build/
+coverage/
+*.log
+*.pid
+.vite/
+*.local
+
+# ---------- Editor & OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
