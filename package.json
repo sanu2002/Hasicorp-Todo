@@ -1,0 +1,26 @@
+{
+  "name": "hasicorp-todo",
+  "version": "1.0.0",
+  "description": "Todo app demonstrating HashiCorp Vault secrets management and GitHub Flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanu2002/Hasicorp-Todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sanu2002/Hasicorp-Todo/issues"
+  },
+  "homepage": "https://github.com/sanu2002/Hasicorp-Todo#readme",
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}
