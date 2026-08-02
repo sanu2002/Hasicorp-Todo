@@ -1,5 +1,6 @@
 import express from "express" ;
 
+import { todosRouter } from "./routes/todos.js";
 
 
 const app = express();
@@ -8,6 +9,8 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 
+
+app.use("/api/todos",todosRouter);
 
 // Logs every request so you can see the client talking.
 app.use((req, res, next)=>{
@@ -29,7 +32,15 @@ app.use((req, res) => {
     res.status(404).json({ error: "Not found" });
 });
 
-
+// Error handler. FOUR arguments is how Express recognises one.
+// Never send err.stack to a client - it leaks your file paths.
+app.use((err, req, res, next) => {
+  console.error(err);
+  const status = err.status || 500;
+  const message =
+    status === 400 ? "Invalid request body" : "Internal server error";
+  res.status(status).json({ error: message });
+});
 
 app.listen(PORT, ()=> {
     console.log(`API listening on http://localhost:${PORT}`)
