@@ -1,5 +1,8 @@
 # Hasicrop-Todo
 
+
+Problem :- Your teammate clones the repo, sees POSTGRES_PASSWORD= empty, and messages you: "bro send the .env". Straight back to WhatsApp or slack .
+
 A full-stack todo app that exists to demonstrate two
 team practices, not to be a product:
 
